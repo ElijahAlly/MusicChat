@@ -43,7 +43,7 @@ const GenerateAnonymousUsername = (props: GAUProps) => {
 				<form className='anonymous-form'>
                     <h3 className='guideline-header'>Usernames should:</h3>
                     <h4 className='guideline'>be at least 2 characters long</h4>
-                    <h4 className='guideline'>only contain numbers, letters, underscores "_"</h4>
+                    <h4 className='guideline'>only contain numbers, letters, underscores {`"_"`}</h4>
 
 					<input
 						type='text'
@@ -62,7 +62,7 @@ const GenerateAnonymousUsername = (props: GAUProps) => {
                             Generate A Random Username
                         </button>
                         <button className='submit-btn underscore-btn' onClick={(e) => {e.preventDefault();setSeparator((prev) => prev === '_' ? '' : '_')}}>
-                            {separator === '_' ? 'Without' : 'With'} underscores "_"
+                            {separator === '_' ? 'Without' : 'With'} underscores {`"_"`}
                         </button>
                     </div>
 				</form>
