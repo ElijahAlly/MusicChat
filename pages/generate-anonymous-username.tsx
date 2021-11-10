@@ -11,15 +11,12 @@ import { useState } from 'react';
 import UsernameGuidelines from '../components/username_guidelines';
 import check_username_guidelines from '../lib/check_username_guidelines';
 
-
-interface GAUProps {}
-
 const config: Config = {
     dictionaries: [adjectives, colors, animals],
     separator: '_',
 };
 
-const GenerateAnonymousUsername = (props: GAUProps) => {
+function GenerateAnonymousUsername() {
     const [separator, setSeparator] = useState('_');
 	const [username, setUsername] = useState(uniqueNamesGenerator(config));
 
