@@ -8,6 +8,9 @@ import {
 	animals,
 } from 'unique-names-generator';
 import { useState } from 'react';
+import UsernameGuidelines from '../components/username_guidelines';
+import check_username_guidelines from '../lib/check_username_guidelines';
+
 
 interface GAUProps {}
 
@@ -41,17 +44,16 @@ const GenerateAnonymousUsername = (props: GAUProps) => {
 			<Navbar loggedIn={false} />
 			<section className='anonymous-section'>
 				<form className='anonymous-form'>
-                    <h3 className='guideline-header'>Usernames should:</h3>
-                    <h4 className='guideline'>be at least 2 characters long</h4>
-                    <h4 className='guideline'>only contain numbers, letters, underscores {`"_"`}</h4>
-
+                    <UsernameGuidelines />
 					<input
 						type='text'
 						className='form-input'
-						onChange={(e) => setUsername(e.currentTarget.value)}
-						value={handleUnderscores(username)}
+						onChange={(e) => 
+                            setUsername(e.currentTarget.value)
+                        }
+						value={check_username_guidelines(handleUnderscores(username))}
+                        id='username-input'
 					/>
-
                     <div className='btn-container'>
                         <button
                             className='submit-btn'

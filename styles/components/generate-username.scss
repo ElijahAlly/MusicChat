@@ -10,6 +10,7 @@ $c-old-lavender: #685762;
 $c-gray-purple: #a9a6a8;
 $c-cultured-hover: #d6d6d6c9;
 $c-cultured: #f6f4f5;
+$c-error-red:  red;
 
 // fonts
 $f-dongle: 'Dongle', sans-serif;
@@ -37,25 +38,6 @@ $box-shadow-small: 1px 1px 2px 0px $c-old-lavender;
 		max-width: 620px;
 		height: 250px;
 		box-shadow: $box-shadow;
-
-		.guideline-header {
-			font-family: $f-dongle;
-			font-size: 2rem;
-			font-weight: 300;
-			margin: 0;
-		}
-
-		.guideline {
-			list-style-type: none;
-			list-style-position: outside;
-			font-family: $f-dongle;
-			font-size: 1.4rem;
-			font-weight: 300;
-			margin: 0;
-            margin-bottom: 10px;
-			text-align: center;
-            line-height: 15px;
-        }
 
 		.form-input {
 			border-radius: 10px;
@@ -137,6 +119,29 @@ $box-shadow-small: 1px 1px 2px 0px $c-old-lavender;
 			background-color: $c-cultured-hover;
 		}
 	}
+}
+
+.guideline-header {
+	font-family: $f-dongle;
+	font-size: 2rem;
+	font-weight: 300;
+	margin: 0;
+}
+
+.guideline {
+	list-style-type: none;
+	list-style-position: outside;
+	font-family: $f-dongle;
+	font-size: 1.4rem;
+	font-weight: 300;
+	margin: 0;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 15px;
+}
+
+.username-error {
+    color: $c-error-red;
 }
 
 @media (max-width: 700px) {

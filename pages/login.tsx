@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Link from 'next/link';
 import Navbar from "../components/navbar";
+import OtherAuthOptions from "../components/other_auth_options";
 
 
 function LogIn() {
@@ -34,9 +34,7 @@ function LogIn() {
                     </div>
                     <button className='submit-btn' onClick={(e) => e.preventDefault()}>Log In</button>
                 </form>
-                <Link href='/generate-anonymous-username'>
-                    <a className='auth-btn'>Continue Anonymously</a>
-                </Link>
+                <OtherAuthOptions />
             </section>
         </section>
     );
