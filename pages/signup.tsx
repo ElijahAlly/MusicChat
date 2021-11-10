@@ -5,10 +5,15 @@ import UsernameGuidelines from '../components/username_guidelines';
 import checkUsernameGuidelines from '../lib/check_username_guidelines';
 
 function SignUp() {
+	let lengthCheck: HTMLElement | null = null;
+	let specialCharsCheck: HTMLElement | null = null;
+	
 	useEffect(() => {
-		checkUsernameGuidelines('');
+		checkUsernameGuidelines('', lengthCheck, specialCharsCheck);
         const usernameInput = document.getElementById('username-input');
         usernameInput?.focus();
+		lengthCheck = document.getElementById('two-chars-long');
+		specialCharsCheck = document.getElementById('no-special-chars');
 	}, []);
 
 	return (
@@ -23,7 +28,7 @@ function SignUp() {
 						placeholder='Enter a username'
 						className='form-input'
 						id='username-input'
-						onChange={(e) => checkUsernameGuidelines(e.currentTarget.value)}
+						onChange={(e) => checkUsernameGuidelines(e.currentTarget.value, lengthCheck, specialCharsCheck)}
 					/>
 					<button className='submit-btn' onClick={(e) => e.preventDefault()}>
 						Next

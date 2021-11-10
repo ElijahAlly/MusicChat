@@ -1,6 +1,6 @@
-export default function(username: string) {
-    const lengthCheck = document.getElementById('two-chars-long');
-    const specialCharsCheck = document.getElementById('no-special-chars');
+
+export default function(username: string, lengthCheck: HTMLElement | null, specialCharsCheck: HTMLElement | null) {
+    if (lengthCheck === null) return username;
 
     if (username.length < 2) {
         lengthCheck?.classList.add('username-error');

@@ -7,7 +7,7 @@ import {
 	colors,
 	animals,
 } from 'unique-names-generator';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import UsernameGuidelines from '../components/username_guidelines';
 import check_username_guidelines from '../lib/check_username_guidelines';
 
@@ -36,6 +36,14 @@ function GenerateAnonymousUsername() {
         return newUsername;
     }   
 
+    let lengthCheck = null;
+    let specialCharsCheck = null;
+
+    useEffect(() => {
+        lengthCheck = document.getElementById('two-chars-long');
+        specialCharsCheck = document.getElementById('no-special-chars');
+    }, [])
+
 	return (
 		<>
 			<Navbar loggedIn={false} />
@@ -48,7 +56,7 @@ function GenerateAnonymousUsername() {
 						onChange={(e) => 
                             setUsername(e.currentTarget.value)
                         }
-						value={check_username_guidelines(handleUnderscores(username))}
+						value={check_username_guidelines(handleUnderscores(username), lengthCheck, specialCharsCheck)}
                         id='username-input'
 					/>
                     <div className='btn-container'>
