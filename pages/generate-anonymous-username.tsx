@@ -9,7 +9,7 @@ import {
 } from 'unique-names-generator';
 import { useEffect, useState } from 'react';
 import UsernameGuidelines from '../components/username_guidelines';
-import check_username_guidelines from '../lib/check_username_guidelines';
+import checkUsernameGuidelines from '../lib/check_username_guidelines';
 
 const config: Config = {
     dictionaries: [adjectives, colors, animals],
@@ -36,13 +36,13 @@ function GenerateAnonymousUsername() {
         return newUsername;
     }   
 
-    let lengthCheck = null;
-    let specialCharsCheck = null;
+    let lengthCheck: HTMLElement | null = null;
+    let specialCharsCheck: HTMLElement | null = null;
 
     useEffect(() => {
         lengthCheck = document.getElementById('two-chars-long');
         specialCharsCheck = document.getElementById('no-special-chars');
-    }, [])
+    })
 
 	return (
 		<>
@@ -53,10 +53,11 @@ function GenerateAnonymousUsername() {
 					<input
 						type='text'
 						className='form-input'
-						onChange={(e) => 
-                            setUsername(e.currentTarget.value)
-                        }
-						value={check_username_guidelines(handleUnderscores(username), lengthCheck, specialCharsCheck)}
+						onChange={(e) => {
+                            setUsername(e.currentTarget.value);
+                            checkUsernameGuidelines(e.currentTarget.value, lengthCheck, specialCharsCheck);
+                        }}
+						value={handleUnderscores(username)}
                         id='username-input'
 					/>
                     <div className='btn-container'>
