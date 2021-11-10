@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+// colors
+$c-xiketic: #0a0410;
+$c-darker-purple: #190b28;
+$c-dark-purple: #2d1e37;
+$c-english-violet: #413145;
+$c-eggplant: #554454;
+$c-old-lavender: #685762;
+$c-gray-purple: #a9a6a8;
+$c-cultured-hover: #d6d6d6c9;
+$c-cultured: #f6f4f5;
+
+// fonts
+$f-dongle: 'Dongle', sans-serif;
+
+// other
+$border-thin: 1px solid $c-gray-purple;
+$box-shadow: 2px 2px 4px 0px $c-old-lavender;
+$box-shadow-small: 1px 1px 2px 0px $c-old-lavender;
+
+.auth-page {
+    background-color: $c-cultured;
+    height: 100vh;
+    width: 100vw;
+
+    // .signup-section {
+
+    // }
+
+    .login-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border: $border-thin;
+            border-radius: 10px;
+            margin-top: 7%;
+            padding: 15px;
+            width: 70%;
+            max-width: 620px;
+            height: 200px;
+            box-shadow: $box-shadow;
+
+            .form-input {
+                user-select: none;
+                border-radius: 10px;
+                border: $border-thin;
+                width: 80%;
+                height: 32px;
+                padding-left: 10px;
+                transition: .3s;
+
+                &:focus {
+                    width: 85%;
+                    outline: none;
+                }
+            }
+
+            .password-container {
+                position: relative;
+                display: flex;
+                width: 80%;
+                height: fit-content;
+                transition: .3s;
+
+                .show-password {
+                    margin: 0;
+                    margin-right: 7px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-family: $f-dongle;
+                    font-weight: 300;
+                    cursor: pointer;
+                }
+
+                .form-input {
+                    width: 100%;
+                    height: 30px;
+                }
+
+                &:focus-within {
+                    width: 85%;
+                }
+            }
+
+
+            .submit-btn {
+                user-select: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+                border: $border-thin;
+                border-radius: 10px;
+                width: 40%;
+                height: 30px;
+                cursor: pointer;
+                transition: .3s;
+                background-color: $c-old-lavender;
+                color: $c-cultured;
+
+                &:hover {
+                    background-color: $c-english-violet;
+                }
+            }
+        }
+
+        .auth-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: $border-thin;
+            border-radius: 10px;
+            margin-top: 20px;
+            padding: 17px;
+            padding-top: 20px;
+            width: 68%;
+            max-width: 600px;
+            height: 33px;
+            user-select: none;
+            font-family: $f-dongle;
+            font-weight: 300;
+            font-size: 24px;
+            box-shadow: $box-shadow-small;
+            transition: .3s;
+            background-color: $c-cultured;
+            color: $c-english-violet;
+
+            &:hover {
+                width: 70%;
+                max-width: 620px;
+                background-color: $c-cultured-hover;
+            }
+        }
+    }
+}
+
+// .signup {
+
+// }
+
+// .login {
+    
+// }
+
+

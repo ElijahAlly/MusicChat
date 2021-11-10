@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+// colors
+$c-xiketic: #0a0410;
+$c-darker-purple: #190b28;
+$c-dark-purple: #2d1e37;
+$c-english-violet: #413145;
+$c-eggplant: #554454;
+$c-old-lavender: #685762;
+$c-cultured: #f6f4f5;
+
+// fonts
+$f-dongle: 'Dongle', sans-serif;
+
+
+.navbar {
+    width: 100vw;
+    height: 64px;
+    background-color: $c-old-lavender;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .app-info {
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        height: 100%;
+        margin-left: 10px;
+
+        .app-name {
+            color: $c-cultured;
+            font-size: 2rem;
+            font-family: $f-dongle;
+            margin: 0 0 0 10px;
+            cursor: pointer;
+        }
+
+        span {
+            border-radius: 100px;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: fit-content;
+        user-select: none;
+        cursor: pointer;
+        
+        .link {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-family: $f-dongle;
+            margin-right: 15px;
+            padding: 5px;
+            border-radius: 10px;
+            height: 50%;
+            color: $c-cultured;
+        }
+
+        .active-link {
+            background-color: $c-english-violet;
+        }
+    }
+}
