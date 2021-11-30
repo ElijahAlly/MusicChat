@@ -1,6 +1,10 @@
 import Link from 'next/link';
 
-function OtherAuthOptions() {
+interface OtherAuthOptionsParams {
+	login: boolean;
+}
+
+function OtherAuthOptions({ login }: OtherAuthOptionsParams) {
 	return (
 		<>
 			<div className='or-splitter'>
@@ -8,6 +12,9 @@ function OtherAuthOptions() {
 				<div className='or-split'>OR</div>
 				<div className='line'></div>
 			</div>
+			<Link href={`/${login ? 'login' : 'signup'}`}>
+				<a className='auth-btn'>{login ? 'Log In' : 'Sign Up'}</a>
+			</Link>
 			<Link href='/generate-anonymous-username'>
 				<a className='auth-btn'>Continue Anonymously</a>
 			</Link>

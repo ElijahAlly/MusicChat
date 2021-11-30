@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import OtherAuthOptions from '../components/other_auth_options';
 import UsernameGuidelines from '../components/username_guidelines';
@@ -54,7 +55,6 @@ function SignUp() {
 
 	return (
 		<section className='auth-page signup'>
-			<Navbar loggedIn={false} />
 			<section className='login-section'>
 				<form className='login-form signup-form'>
 					<label>Sign Up Here</label>
@@ -136,8 +136,10 @@ function SignUp() {
 						Next
 					</button>
 				</form>
-				<OtherAuthOptions />
+				<OtherAuthOptions login={true}/>
 			</section>
+			<Navbar loggedIn={false} />
+			<Footer />
 		</section>
 	);
 }

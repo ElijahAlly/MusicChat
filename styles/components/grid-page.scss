@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+// colors
+$c-xiketic: #0a0410;
+$c-darker-purple: #190b28;
+$c-dark-purple: #2d1e37;
+$c-english-violet: #413145;
+$c-eggplant: #554454;
+$c-old-lavender: #685762;
+$c-gray-purple: #a9a6a8;
+$c-cultured-hover: #d6d6d6c9;
+$c-cultured: #f6f4f5;
+$c-error-red:  red;
+
+// fonts
+$f-dongle: 'Dongle', sans-serif;
+
+// other
+$border-thin: 1px solid $c-gray-purple;
+$box-shadow: 2px 2px 4px 0px $c-old-lavender;
+$box-shadow-small: 1px 1px 2px 0px $c-old-lavender;
+
+.grid-page {
+    margin: 0px;
+    position: relative;
+    background-color: $c-cultured;
+    height: 100%;
+    width: 100%;
+    padding: 1%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: grid;
+    gap: 10px;
+    grid-auto-rows: 145px;
+    grid-auto-rows: minmax(140px, 150px);
+
+    .grid-row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        background-color: $c-cultured-hover;
+        border-radius: 10px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        padding: 10px;
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            margin: 0 10px;
+            height: 7px;
+        }
+
+        &::-webkit-scrollbar-track-piece {
+            background-color: transparent;
+            margin: 0 20px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $c-eggplant;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .small-grid-box {
+            border-radius: 10px;
+            margin-right: 10px;
+            height: 100%;
+            width: 140px;
+            min-width: 140px;
+            max-width: 140px;
+            background-color: $c-gray-purple;
+        }
+        
+        .medium-grid-box {
+            border-radius: 10px;
+            margin-right: 10px;
+            height: 100%;
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+            background-color: $c-gray-purple;
+        }
+        
+        .large-grid-box {
+            border-radius: 10px;
+            margin-right: 10px;
+            height: 100%;
+            width: 300px;
+            min-width: 300px;
+            max-width: 300px;
+            background-color: $c-gray-purple;
+        }
+    }
+}

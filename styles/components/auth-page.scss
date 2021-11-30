@@ -26,6 +26,7 @@ $box-shadow-small: 1px 1px 2px 0px $c-old-lavender;
 	width: 100vw;
 
 	.login-section {
+		padding-top: 64px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -42,6 +43,7 @@ $box-shadow-small: 1px 1px 2px 0px $c-old-lavender;
 			padding: 15px;
 			width: 70%;
 			max-width: 620px;
+			min-width: 260px;
 			height: 200px;
 			box-shadow: $box-shadow;
 
@@ -142,6 +144,7 @@ $box-shadow-small: 1px 1px 2px 0px $c-old-lavender;
 
 			.or-split {
 				width: 8%;
+				min-width: 80px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -178,6 +181,7 @@ $box-shadow-small: 1px 1px 2px 0px $c-old-lavender;
 			padding: 17px;
 			padding-top: 20px;
 			width: 68%;
+			min-width: 260px;
 			max-width: 600px;
 			height: 33px;
 			user-select: none;

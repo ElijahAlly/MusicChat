@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+// colors
+$c-xiketic: #0a0410;
+$c-darker-purple: #190b28;
+$c-dark-purple: #2d1e37;
+$c-english-violet: #413145;
+$c-eggplant: #554454;
+$c-old-lavender: #685762;
+$c-gray-purple: #a9a6a8;
+$c-cultured-hover: #d6d6d6c9;
+$c-cultured: #f6f4f5;
+$c-error-red:  red;
+
+// fonts
+$f-dongle: 'Dongle', sans-serif;
+
+// other
+$border-thin: 1px solid $c-gray-purple;
+$box-shadow: 2px 2px 4px 0px $c-old-lavender;
+$box-shadow-small: 1px 1px 2px 0px $c-old-lavender;
+
+.footer {
+    height: 64px;
+    width: 100%;
+    background-color: $c-xiketic;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
